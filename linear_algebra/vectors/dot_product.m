@@ -15,3 +15,24 @@ for i = 1:length(v1)
 endfor
 
 dp3
+
+%% Random Vectors
+
+n = 10;
+a = rand(n, 1);
+b = rand(n, 1);
+c = rand(n, 1);
+
+%% Distributive property
+
+result1 = a' * (b + c)
+result2 = a' * b + a' * c
+
+disp([result1 result2])
+
+%% Associative property does not hold
+
+result1 = a' * (b' * c);
+result2 = (a' * b)' * c;
+
+disp([result1' result2])
